@@ -97,11 +97,13 @@ main {
 
 
 .content {
-   margin-left: 40px;
+   margin-top: -90px;
+  margin-left: 90px;
   flex: 1;
   max-width: 500px;
 }
 .content h1{
+    margin-bottom: 30px;
     color:#6dc6ee ;
 }
 .content p{
@@ -120,8 +122,8 @@ main {
 
 .button-wrapper {
   position: absolute;
-  bottom: 40px;
-  left: 50%;
+  bottom: 140px;
+  left: 15%;
   transform: translateX(-50%);
 }
 

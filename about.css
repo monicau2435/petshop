@@ -83,8 +83,9 @@ body {
 }
 
 .content-right img {
+  margin-left: 150px;
   width: 360px;
   height: 360px;
   object-fit: cover;
-  object-position: center;
+  border-radius: 50%;
 }
