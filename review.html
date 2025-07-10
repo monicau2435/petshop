@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Review Page</title>
+  <link rel="stylesheet" href="review.css"/>
+</head>
+<body>
+    <section class="menu">
+    <div class="nav">
+      <div class="logo">
+        <h1>pure Love🐾</h1>
+      </div>
+      <ul class="navlist">
+        <li><a href="evo.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a  href="about.html">About</a></li>
+        <li><a class="active" href="review.html">Review</a></li>
+      </ul>
+    </div>
+  </section>
+ <div class="card">
+  <div class="container">
+    <h1>Rate us</h1>
+    <form id="review-form">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <div class="rating">
+        <span data-value="5">&#9733;</span>
+        <span data-value="4">&#9733;</span>
+        <span data-value="3">&#9733;</span>
+        <span data-value="2">&#9733;</span>
+        <span data-value="1">&#9733;</span>
+      </div>
+      <textarea id="comment" placeholder="Your Review" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+
+    <h2>Reviews</h2>
+    <div id="reviews-list"></div>
+  </div>
+ </div>
+  <script src="review.js"></script>
+</body>
+</html>
