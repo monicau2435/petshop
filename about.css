@@ -14,7 +14,7 @@ body {
 
 .menu {
   width: 100%;
-  background-color: #6dc6ee; 
+  background-color: #6dc6ee;
 }
 
 .nav {
@@ -87,5 +87,28 @@ body {
   width: 360px;
   height: 360px;
   object-fit: cover;
-  border-radius: 50%;
+}
+@keyframes spinBounce {
+  0% {
+    transform: rotate(0deg) scale(0.3) translateY(-200px);
+  }
+  50% {
+    transform: rotate(360deg) scale(1.2) translateY(20px);
+  }
+  70% {
+    transform: rotate(720deg) scale(1) translateY(-10px);
+  }
+  100% {
+    transform: rotate(720deg) scale(1) translateY(0);
+  }
+}
+
+.content-right img {
+  margin-left: 150px;
+  width: 360px;
+  height: 360px;
+  object-fit: cover;
+
+  animation: spinBounce 1.6s ease-out forwards;
+  transform-origin: center;
 }

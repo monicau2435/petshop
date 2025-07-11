@@ -71,30 +71,6 @@ main {
   flex-wrap: wrap; 
 }
 
-.content {
-  flex: 1;
-  max-width: 500px;
-}
-
-.image {
-  flex: 1;
-  text-align: center;
-}
-
-.image img {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-}
-
-.button-wrapper {
-  margin-top: 20px;
-  position: static;
-  transform: none;
-  left: auto;
-  bottom: auto;
-}
-
 
 .content {
    margin-top: -90px;
@@ -116,8 +92,9 @@ main {
 }
 
 .image img {
-  width: 300px;;
-  height:300px;
+  object-fit: cover;
+  width: 400px;;
+  height:400px;
 }
 
 .button-wrapper {
@@ -139,4 +116,37 @@ button {
 
 button:hover {
   background-color: #6dc6ee;
+}
+/* Add fade-in from bottom */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add fade-in for image */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.content {
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0; /* ensure it starts invisible */
+}
+
+.image img {
+  animation: fadeIn 1.2s ease-out forwards;
+  opacity: 0;
 }

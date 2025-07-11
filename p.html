@@ -2,53 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Product Page</title>
+  <title>Product Listing</title>
   <link rel="stylesheet" href="p.css">
 </head>
-<script>
-  function goToProduct(id) {
-    window.location.href = "products.html";
-  }
-</script>
 <body>
-
-  <header class="menu">
+   <section class="menu">
     <div class="nav">
-      <div class="logo">pure love 🐾</div>
-      <nav>
-        <ul class="navlist">
-          <li><a class="active" href="index.html">Home</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="review.html">Review</a></li>
-        </ul>
-      </nav>
+      <div class="logo">
+        <h1>pure Love🐾</h1>
+      </div>
+      <ul class="navlist">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="p.html">products</a></li>
+        <li><a  href="about.html">About</a></li>
+        <li><a href="review.html">Review</a></li>
+      </ul>
     </div>
-  </header>
-
-  <h1>category</h1>
-
- 
-<div class="product-grid">
-  <div class="product-item" onclick="goToProduct(1)">
-    <img src="image/dog.jpg" alt="Product 1">
-    <span>puppy</span>
-  </div>
-  <div class="product-item" onclick="goToProduct(2)">
-    <img src="image/cat.jpg" alt="Product 2">
-    <span>kitty</span>
-  </div>
-  <div class="product-item" onclick="goToProduct(3)">
-    <img src="image/rabbit.jpg" alt="Product 3">
-    <span>Rabbit</span>
-  </div>
-  <div class="product-item" onclick="goToProduct(4)">
-    <img src="image/parrot.jpg" alt="Product 4">
-    <span>parrot</span>
-  </div>
-</div>
-
-  
+  </section>
+  <h1>Our Products</h1>
+  <div class="product-list" id="product-list"></div>
   <script src="p.js"></script>
 </body>
 </html>

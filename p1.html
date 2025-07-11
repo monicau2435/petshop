@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Product Details</title>
+  <link rel="stylesheet" href="p1.css">
+</head>
+
+<body>
+  <section class="menu">
+    <div class="nav">
+      <div class="logo">
+        <h1>pure Love🐾</h1>
+      </div>
+      <ul class="navlist">
+        <li><a  href="index.html">Home</a></li>
+        <li><a class="active" href="p.html">Products</a></li>
+        <li><a  href="about.html">About</a></li>
+        <li><a href="review.html">Review</a></li>
+      </ul>
+    </div>
+  </section>
+  <div class="product-details" id="product-details"></div>
+
+  <script>
+    const product = JSON.parse(localStorage.getItem('selectedProduct'));
+    const detailsDiv = document.getElementById('product-details');
+
+    if (product) {
+      detailsDiv.innerHTML = `
+        <img src="${product.image}" alt="${product.name}" class="detail-img"/>
+        <div>
+        <h2>${product.name}</h2>
+        <p>${product.description}</p>
+        <p><strong>Price:</strong> $${product.price}</p>
+        <div class="quantity">
+          <button onclick="changeQty(-1)">-</button>
+          <span id="qty">1</span>
+          <button onclick="changeQty(1)">+</button>
+        </div>
+        <button onclick="addToCart()">Add to Cart</button>
+        </div>
+      `;
+    }
+
+    function changeQty(amount) {
+      const qtySpan = document.getElementById('qty');
+      let current = parseInt(qtySpan.textContent);
+      current = Math.max(1, current + amount);
+      qtySpan.textContent = current;
+    }
+
+    function addToCart() {
+      alert(`Added ${document.getElementById('qty').textContent} of "${product.name}" to cart!`);
+    }
+  </script>
+</body>
+
+</html>
